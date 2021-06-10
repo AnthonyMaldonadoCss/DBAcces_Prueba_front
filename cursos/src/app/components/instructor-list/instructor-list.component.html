@@ -1,0 +1,33 @@
+<style>
+    .container {
+        margin-top: 55px;
+    }
+</style>
+<div class="container">
+    <table class="table table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Name</th>
+                <th>Stack</th>
+                <th>Fecha de ingreso</th>
+                <th>Imagen</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody class="align-middle">
+            <tr *ngFor="let curso of cursos">
+                <td> {{curso.nombre}} </td>
+                <td> {{curso.descripcion}} </td>
+                <td> {{curso.fecha}} </td>
+                <td><img [src]="curso.image" class="img-thumbnail face" alt="" height="150" width="270"> </td>
+                <td>
+                    <div class="d-flex justify-content-around">
+                        <button class="btn btn-danger">
+                            <i class="far fa-trash-alt"></i>
+                        </button> <a href="" class="btn btn-info btn-block">Editar</a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
